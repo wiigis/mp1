@@ -398,9 +398,13 @@ section {
 
 // NAVBAR LABELS
 
-nav {
+header {
     position: sticky;
-    top: 0; 
+    top: 0;
+    z-index: 1000; 
+}
+
+nav {
 
     // making navigation area look like actual bar
     width: 100%;
