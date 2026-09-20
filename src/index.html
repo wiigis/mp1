@@ -6,8 +6,116 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
     </head>
+
+    <!-- allowing each seciton to be traveled to by click of button -->
+    <!-- navigation essentially -->
+    <nav> 
+        <div class="logo"> FN </div>
+
+        <div class="nav-links"> 
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Video">Video</a>
+            <a href="#Teams">Teams</a>
+        </div>
+
+    </nav>
+
+    <!-- splitting webpage into x amount of sections -->
     <body>
-        <h1>Hello Worlds! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <section id="Home">
+            <div class="intro">
+
+                <p class="welcome">WELCOME TO</p>
+
+                <h1>Fortnite</h1>
+
+                <p class="subtitle">
+                    Free-to-Play Cross-Platform Online Game
+                </p>
+
+                <a href="#About" class="explore-button">
+                    Explore ↓
+                </a>
+
+            </div>
+        </section>
+
+        <section id="About">
+        </section>
+
+        <section id="Video">
+        </section>
+
+        <section id="Teams">
+
+            <div class="teams-content">
+
+                <h2>Teams</h2>
+
+                <p class="teams-subtitle">
+                    Choose a team size to learn more
+                </p>
+
+                <div class="game-mode-container">
+
+                    <div class="game-mode-card" data-modal="solo-modal">
+                        <div class="player-icon">●</div>
+                        <h3>Solo</h3>
+                        <p>1 Player</p>
+                        <button>Learn More →</button>
+                    </div>
+
+                    <div class="game-mode-card" data-modal="duo-modal">
+                        <div class="player-icon">●●</div>
+                        <h3>Duos</h3>
+                        <p>2 Players</p>
+                        <button>Learn More →</button>
+                    </div>
+
+                    <div class="game-mode-card" data-modal="trio-modal">
+                        <div class="player-icon">●●●</div>
+                        <h3>Trios</h3>
+                        <p>3 Players</p>
+                        <button>Learn More →</button>
+                    </div>
+
+                    <div class="game-mode-card" data-modal="squad-modal">
+                        <div class="player-icon">●●●●</div>
+                        <h3>Squads</h3>
+                        <p>4 Players</p>
+                        <button>Learn More →</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="solo-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close">&times;</span>
+
+                <div class="modal-icon">●</div>
+
+                <h2>Solo</h2>
+
+                <p>
+                    Play Fortnite individually against other players.
+                    The last player standing wins.
+                </p>
+
+                <hr>
+
+                <p>✓ 1 Player</p>
+                <p>✓ Individual gameplay</p>
+                <p>✓ Last player standing wins</p>
+
+            </div>
+
+        </div>
     </body>
 </html>
