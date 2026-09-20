@@ -16,6 +16,16 @@ const navbar = document.querySelector("nav");
 const sections = document.querySelectorAll("section"); 
 const navLinks = document.querySelectorAll(".nav-links a"); 
 
+// for carousel 
+const slides = document.querySelectorAll(".carousel-slide");
+const dots = document.querySelectorAll(".dot");
+
+const previousButton = document.querySelector(".carousel-button.previous");
+const nextButton = document.querySelector(".carousel-button.next");
+
+let currentSlide = 0; 
+
+
 // detect scrolling, shrink navbar when detected
 window.addEventListener("scroll", function() {
 
@@ -29,6 +39,7 @@ window.addEventListener("scroll", function() {
 
     const navbarBottom = navbar.getBoundingClientRect().bottom;  // getting location of the bottom of navbar
 
+    // const checkPoint = navbar.offsetHeight + 1;
 
     sections.forEach(function (section) {
 
@@ -36,14 +47,14 @@ window.addEventListener("scroll", function() {
 
         // checking if section reached/passed bottom of navbar
         // if so, then that is the section we are currently reading
-        if (sectionPosition.top <= navbarBottom) {
+        if (sectionPosition.top <= navbarBottom && sectionPosition.bottom > navbarBottom) {
             currentSection = section.id;
         }
 
     });
 
     // this is special case user reached bottom of page
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1) {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
         currentSection = sections[sections.length - 1].id;
     }
 
@@ -92,4 +103,52 @@ closeButtons.forEach(function(button) {
 
     });
 
+});
+
+// Function for displaying a slide
+function showSlide(index) {
+
+    // Remove active class from all slides
+    slides.forEach(function(slide) {
+        slide.classList.remove("active");
+    });
+
+    // Remove active class from all dots
+    dots.forEach(function(dot) {
+        dot.classList.remove("active");
+    });
+
+    // Display current slide
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+}
+
+
+// Next button
+nextButton.addEventListener("click", function() {
+
+    currentSlide++;
+
+    // If we pass the last slide,
+    // return to the first slide
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+});
+
+
+// Previous button
+previousButton.addEventListener("click", function() {
+
+    currentSlide--;
+
+    // If we go before the first slide,
+    // go to the last slide
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
 });

@@ -5,21 +5,27 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
 
     <!-- allowing each seciton to be traveled to by click of button -->
     <!-- navigation essentially -->
-    <nav> 
-        <div class="logo"> FN </div>
+    <header>
+       <nav> 
+            <div class="logo"> FN </div>
 
-        <div class="nav-links"> 
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Video">Video</a>
-            <a href="#Teams">Teams</a>
-        </div>
+            <div class="nav-links"> 
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Video">Video</a>
+                <a href="#Teams">Teams</a>
+                <a href="#Items">Items</a>
+                <a href="#Contact">Contact</a>
+            </div>
 
-    </nav>
+        </nav> 
+    </header>
 
     <!-- splitting webpage into x amount of sections -->
     <body>
@@ -42,11 +48,68 @@
         </section>
 
         <section id="About">
+            <div class="about-content">
+
+                <h2>About Fortnite</h2>
+
+                <p class="about-subtitle">
+                    Learn more about the world of Fortnite
+                </p>
+
+                <div class="about-columns">
+
+                    <div class="about-column">
+                        <div class="about-icon">◆</div>
+                        <h3>What is Fortnite?</h3>
+                        <p>
+                            Fortnite is a free-to-play online multiplayer game
+                            where players compete, explore, build, and create
+                            across a variety of game modes.
+                        </p>
+                    </div>
+
+                    <div class="about-column">
+                        <div class="about-icon">?</div>
+                        <h3>How It Works</h3>
+                        <p>
+                            Players can compete individually or with teammates
+                            in Solo, Duos, Trios, and Squads in various different gamemodes. 
+                            In the Battle Royale gamemode, players compete to be the last player or team standing.
+                        </p>
+                    </div>
+
+                    <div class="about-column">
+                        <div class="about-icon">★</div>
+                        <h3>Why Play?</h3>
+                        <p>
+                            Fortnite combines competitive gameplay, teamwork,
+                            building, exploration, and constantly changing
+                            experiences in one online game.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
 
         <section id="Video">
+
+        <div class="video-content">
+            <h2>Fortnite Emote</h2>
+
+            <p class="video-subtitle">
+                Experience a Fortnite emote in action!
+            </p>
+
+            <video controls autoplay muted loop>
+                <source src="assets/fortnite fresh emote.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video tag.
+            </video>
+        </div>
         </section>
 
+        <!-- teams section  -->
         <section id="Teams">
 
             <div class="teams-content">
@@ -93,6 +156,7 @@
 
         </section>
 
+        <!-- solos modal  -->
         <div id="solo-modal" class="modal">
 
             <div class="modal-content">
@@ -117,5 +181,189 @@
             </div>
 
         </div>
+
+        <!-- duos modal  -->
+        <div id="duo-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close">&times;</span>
+
+                <div class="modal-icon">●●</div>
+
+                <h2>Duos</h2>
+
+                <p>
+                    Team up with another player and compete against
+                    other teams.
+                </p>
+
+                <hr>
+
+                <p>✓ 2 Players</p>
+                <p>✓ Team-based gameplay</p>
+                <p>✓ Work together to survive</p>
+
+            </div>
+
+        </div>
+
+        <!-- trios modal  -->
+        <div id="trio-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close">&times;</span>
+
+                <div class="modal-icon">●●●</div>
+
+                <h2>Trios</h2>
+
+                <p>
+                    Team up with two other players and compete against
+                    other teams.
+                </p>
+
+                <hr>
+
+                <p>✓ 3 Players</p>
+                <p>✓ Team-based gameplay</p>
+                <p>✓ Work as a team to survive</p>
+
+            </div>
+
+        </div>
+
+        <!-- squads modal  -->
+        <div id="squad-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close">&times;</span>
+
+                <div class="modal-icon">●●●●</div>
+
+                <h2>Sqauds</h2>
+
+                <p>
+                    Team up with three other players and compete against
+                    other teams.
+                </p>
+
+                <hr>
+
+                <p>✓ 4 Players</p>
+                <p>✓ Team-based gameplay</p>
+                <p>✓ Work as a team to survive</p>
+
+            </div>
+
+        </div>
+
+        <section id="Items">
+            <div class="items-content">
+
+                    <h2>Fortnite Items</h2>
+
+                    <p class="items-subtitle">
+                        Explore some useful healing and shield items
+                    </p>
+
+                    <div class="carousel">
+
+                        <!-- Mini Shield -->
+                        <div class="carousel-slide active">
+                            <h3>Mini Shield Potion</h3>
+                            <p>
+                                The Mini Shield Potion is a consumable item that
+                                restores a small amount of shield. It can be used
+                                quickly, making it useful during fights.
+                            </p>
+                        </div>
+
+                        <!-- Big Shield -->
+                        <div class="carousel-slide">
+                            <h3>Shield Potion</h3>
+                            <p>
+                                The Shield Potion, commonly called a Big Shield,
+                                restores a larger amount of shield than a Mini
+                                Shield Potion, but takes longer to consume.
+                            </p>
+                        </div>
+
+                        <!-- Slurp Juice -->
+                        <div class="carousel-slide">
+                            <h3>Slurp Juice</h3>
+                            <p>
+                                Slurp Juice is a consumable item that restores
+                                health and shield, making it useful for recovering
+                                after a battle.
+                            </p>
+                        </div>
+
+                        <button class="carousel-button previous">&#10094;</button>
+                        <button class="carousel-button next">&#10095;</button>
+
+                    </div>
+
+                    <div class="carousel-indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+            </div>
+        </section>
+
+        <section id="Contact">
+
+            <div class="contact-content">
+
+                <h2>Stay Connected</h2>
+
+                <p class="contact-subtitle">
+                    Follow Fortnite on social media
+                </p>
+
+                <div class="social-links">
+
+                    <!-- Twitter / X -->
+                    <a href="https://twitter.com/fortnite"
+                    target="_blank"
+                    class="social-icon"
+                    aria-label="Fortnite on X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://youtube.com/epicfortnite"
+                    target="_blank"
+                    class="social-icon"
+                    aria-label="Fortnite on YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/fortnite"
+                    target="_blank"
+                    class="social-icon"
+                    aria-label="Fortnite on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+                <p class="contact-message">
+                    Keep up with the latest Fortnite news, updates,
+                    events, and more.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Fortnite</p>
+        </footer>
     </body>
 </html>
